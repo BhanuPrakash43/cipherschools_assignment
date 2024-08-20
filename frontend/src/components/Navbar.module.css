@@ -1,0 +1,154 @@
+.nav {
+  display: flex;
+  max-width: 1400px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav h2 {
+  color: #149eca;
+  font-size: 1.7em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navItems {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.loginSignupBtn {
+  display: flex;
+  gap: 2rem;
+}
+.loginSignupBtn a {
+  border-radius: 5px;
+  padding: 0.3rem 1.2rem;
+  background-color: #0677a1;
+}
+
+.loginSignupBtn a:hover {
+  background-color: #2b90b5;
+}
+
+.impBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blogUtils {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.blogUtils li a:hover {
+  text-decoration: underline;
+  transition: 0.35s;
+}
+
+.greet {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .mobileMenuIcon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    width: 95%;
+  }
+
+  .navItems {
+    display: none;
+  }
+
+  .mobileMenuIcon {
+    cursor: pointer;
+  }
+
+  .loginSignupBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .navItems.open .loginSignupBtn li a:hover {
+    transition: 0.25s;
+  }
+
+  .hamburgerMenu {
+    width: 50px;
+    height: 45px;
+    margin-top: 15px;
+  }
+
+  .navItems.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 20vh;
+    background-color: #2d394f;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px 0;
+    transition: 0.45s ease;
+    border-radius: 10px;
+  }
+
+  .navItems.open li {
+    padding-bottom: 10px;
+  }
+
+  .navItems.open li a:hover {
+    /* text-decoration: underline; */
+    transition: 0.25s;
+  }
+  .navItems.open li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .impBtn {
+    flex-direction: column;
+  }
+
+  .blogUtils {
+    flex-direction: column;
+  }
+
+  .blogUtils li a:hover {
+    text-decoration: underline;
+    transition: 0.35s;
+  }
+
+  .greet {
+    text-align: center;
+  }
+}

@@ -1,0 +1,75 @@
+.container {
+  max-width: 1400px;
+  width: 80%;
+  height: 75vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm {
+  text-align: center;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+  background-color: #2b323f;
+}
+
+.loginForm > h1 {
+  color: #149eca;
+}
+
+.loginForm a {
+  font-weight: normal;
+}
+
+.loginForm a:hover {
+  border-bottom: 2px solid whitesmoke;
+}
+
+.formGroup input {
+  width: 90%;
+  height: 40px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background-color: rgba(120, 131, 155, 0.2);
+  border: none;
+  color: whitesmoke;
+}
+
+.formGroup input:focus {
+  outline: 1.6px solid #149eca;
+}
+
+.formGroup > button {
+  width: 93%;
+  height: 40px;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .formGroup input {
+    margin-bottom: 20px;
+  }
+
+  .loginForm {
+    padding: 1em 2em 2em 2em;
+  }
+
+  .formGroup button {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 453px) {
+  .container {
+    width: 90%;
+  }
+
+  .formGroup button {
+    width: 96%;
+  }
+}
