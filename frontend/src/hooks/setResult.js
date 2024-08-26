@@ -8,7 +8,6 @@ export const PushAnswer = (result) => async (dispatch) => {
     console.log(error);
   }
 };
-
 export const updateResult = (index) => async (dispatch) => {
   try {
     dispatch(Action.updateResultAction(index));
@@ -23,7 +22,7 @@ export const usePublishResult = (resultData) => {
     try {
       if (result !== [] && !username) throw new Error("Couldn't get Result");
       await postServerData(
-        `${process.env.VITE_SERVER_HOSTNAME}/api/v1/result`,
+        `${import.meta.env.VITE_SERVER_HOSTNAME}/api/result`,
         resultData,
         (data) => data
       );

@@ -18,7 +18,7 @@ export const useFetchQuestion = () => {
     (async () => {
       try {
         const [{ questions, answers }] = await getServerData(
-          `${process.env.VITE_SERVER_HOSTNAME}/api/v1/questions`,
+          `${import.meta.env.VITE_SERVER_HOSTNAME}/api/v1/questions`,
           (data) => data
         );
 
@@ -42,7 +42,7 @@ export const useFetchQuestion = () => {
 
 export const MoveNextQuestion = () => async (dispatch) => {
   try {
-    dispatch(Action.moveNextAction()); 
+    dispatch(Action.moveNextAction());
   } catch (error) {
     console.log(error);
   }

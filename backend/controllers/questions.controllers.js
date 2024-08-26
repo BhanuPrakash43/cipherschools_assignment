@@ -4,8 +4,8 @@ const { questions, answers } = require("../data.js");
 
 async function getQuestions(req, res) {
   try {
-    const q = await Questions.find();
-    res.json(q);
+    const allQuestions = await Questions.find();
+    res.json(allQuestions);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -44,8 +44,8 @@ async function dropQuestions(req, res) {
 
 async function getResult(req, res) {
   try {
-    const r = await Results.find();
-    res.json(r);
+    const finalResult = await Results.find();
+    res.json(finalResult);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -53,10 +53,10 @@ async function getResult(req, res) {
 
 async function storeResult(req, res) {
   try {
-    const { username, result, attempts, achieved } = req.body;
+    const { username, result, attempts, correctQuestions, achieved } = req.body;
     if (!username || !result) throw new Error("Data Not Provided...!");
 
-    await Results.create({ username, result, attempts, achieved });
+    await Results.create({ username, result, attempts, correctQuestions, achieved });
     res.json({ msg: "Result Saved Successfully...!" });
   } catch (error) {
     res.status(500).json({ error: error.message });

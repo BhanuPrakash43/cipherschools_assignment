@@ -1,20 +1,29 @@
 .homeContainer {
   text-align: center;
-  margin-top: 50px;
-  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.termsContainer {
+  margin-top: 20px;
+}
+
+.checkboxContainer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .startTestButton {
   display: inline-block;
+  margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff; /* Bootstrap primary color */
+  background-color: #007bff;
   color: white;
-  border-radius: 5px;
   text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  border-radius: 5px;
 }
 
-.startTestButton:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+.disabledButton {
+  background-color: gray;
+  pointer-events: none;
 }
